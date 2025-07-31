@@ -40,8 +40,7 @@ def check_internet(host="8.8.8.8", port=53, timeout=3):
         return True
     except socket.error:
         return False
-
-# حلقة لا نهائية تفحص الاتصال كل 10 دقائق
+        
 while True:
     if not check_internet():
         fun()
